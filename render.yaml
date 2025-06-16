@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: task-report-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn task_report_project.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: task_report_project.settings
