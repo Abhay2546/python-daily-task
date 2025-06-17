@@ -62,3 +62,5 @@ def delete_task(request, row_id):
     ws.delete_rows(row_id + 2)  # +2 to skip header and 0-based index
     wb.save(EXCEL_FILE)
     return redirect('task_form')
+
+
